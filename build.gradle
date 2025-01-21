@@ -5,7 +5,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.8.20'
 }
 
-group 'xyz.jeremynoesen.bonebot'
+group 'xyz.jeremynoesen.bonerbot'
 version '1.7.3'
 compileJava.options.encoding = 'UTF-8'
 
@@ -26,11 +26,11 @@ dependencies {
 }
 
 application {
-    mainClassName = 'xyz.jeremynoesen.bonebot.BoneBot'
+    mainClassName = 'xyz.jeremynoesen.bonerbot.BonerBot'
 }
 
 shadowJar {
-    archiveFileName = 'BoneBot.jar'
+    archiveFileName = 'BonerBot.jar'
 }
 
 compileKotlin {
