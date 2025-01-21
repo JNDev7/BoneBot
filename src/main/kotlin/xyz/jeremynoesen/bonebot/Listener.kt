@@ -1,14 +1,14 @@
-package xyz.jeremynoesen.bonebot
+package xyz.jeremynoesen.bonerbot
 
 import net.dv8tion.jda.api.entities.channel.ChannelType
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent
-import xyz.jeremynoesen.bonebot.modules.commands.Commands
-import xyz.jeremynoesen.bonebot.modules.Reactor
-import xyz.jeremynoesen.bonebot.modules.Responder
+import xyz.jeremynoesen.bonerbot.modules.commands.Commands
+import xyz.jeremynoesen.bonerbot.modules.Reactor
+import xyz.jeremynoesen.bonerbot.modules.Responder
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.events.message.MessageUpdateEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import xyz.jeremynoesen.bonebot.modules.Welcomer
+import xyz.jeremynoesen.bonerbot.modules.Welcomer
 import kotlin.concurrent.thread
 
 /**
@@ -28,7 +28,7 @@ class Listener : ListenerAdapter() {
             numThreads++
             thread {
                 try {
-                    if ((!e.author.isBot || (listenToBots && e.author != BoneBot.JDA!!.selfUser))
+                    if ((!e.author.isBot || (listenToBots && e.author != BonerrBot.JDA!!.selfUser))
                             && !e.isFromType(ChannelType.PRIVATE)) {
                         if (!Commands.enabled || !Commands.perform(e.message)) {
                             if (Responder.enabled) Responder.respond(e.message)
@@ -54,7 +54,7 @@ class Listener : ListenerAdapter() {
             numThreads++
             thread {
                 try {
-                    if ((!e.author.isBot || (listenToBots && e.author != BoneBot.JDA!!.selfUser))
+                    if ((!e.author.isBot || (listenToBots && e.author != BonerrBot.JDA!!.selfUser))
                             && !e.isFromType(ChannelType.PRIVATE)) {
                         if (!Commands.enabled || !Commands.perform(e.message)) {
                             if (Responder.enabled) Responder.respond(e.message)
@@ -98,7 +98,7 @@ class Listener : ListenerAdapter() {
         var maxThreads: Int = 8;
 
         /**
-         * Whether BoneBot can listen to other bots for input
+         * Whether BonerrBot can listen to other bots for input
          */
         var listenToBots = false
     }
