@@ -1,9 +1,9 @@
-package xyz.jeremynoesen.bonebot
+package xyz.jeremynoesen.bonerbot
 
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.requests.GatewayIntent
-import xyz.jeremynoesen.bonebot.modules.Statuses
+import xyz.jeremynoesen.bonerbot.modules.Statuses
 import java.awt.Toolkit
 import javax.imageio.ImageIO
 
@@ -13,7 +13,7 @@ import javax.imageio.ImageIO
  *
  * @author Jeremy Noesen
  */
-object BoneBot {
+object BonerBot {
 
     /**
      * Instance of JDA for this bot
