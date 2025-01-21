@@ -1,15 +1,15 @@
 <img src="img/Logo.svg" alt="Logo" title="Logo" align="right" width="72" height="72" />
 
-# BoneBot
+# BonerBot
 
 ## About
 
-BoneBot is a self-hosted, modular Discord bot that can respond and react to messages, add custom commands, send random
+BonerBot is a self-hosted, modular Discord bot that can respond and react to messages, add custom commands, send random
 files and quotes, and generate memes on demand to add more life to a Discord server.
 
 ## Purpose
 
-BoneBot was originally written as a meme-generating Discord bot for the ISUCF'V'MB Trombone and Bass Trombone Discord
+BonerBot was originally written as a meme-generating Discord bot for the ISUCF'V'MB TromBoner and Bass TromBoner Discord
 server. The bot also has functionality to respond and react to messages and commands. This is utilized as a way to add
 helpful commands to the server to show links for online folders and band information.
 
@@ -79,15 +79,15 @@ The reactor will react to a message with an emote when a trigger phrase is sent 
 
 ### Commands
 
-BoneBot allows for custom commands to be made to provide text and image responses and run shell commands. Their usage is
+BonerBot allows for custom commands to be made to provide text and image responses and run shell commands. Their usage is
 pretty simple - a command called `test` would be used by typing `bbtest`. If you make a mistake in typing a command, you
 can edit the message to fix it without needing to send another message. This module can provide simple ping-pong style
 commands, or more complex commands as needed. Some fantastic examples of custom commands can be
-found [here](https://github.com/diademiemi/BoneBot-Scripts).
+found [here](https://github.com/diademiemi/BonerBot-Scripts).
 
 ### Statuses
 
-BoneBot can have various randomized statuses shown in Discord that change over time.
+BonerBot can have various randomized statuses shown in Discord that change over time.
 
 ### Welcomer
 
@@ -102,30 +102,30 @@ Any version of Windows, macOS, or Linux that can run Java 11 or later.
 
 1. Clone or download this repository.
 2. Run `./gradlew shadowJar` in the directory of the project.
-3. `/build/libs/BoneBot.jar` should have been generated.
+3. `/build/libs/BonerBot.jar` should have been generated.
 
-You can also grab `BoneBot.jar` from the latest releases.
+You can also grab `BonerBot.jar` from the latest releases.
 
 ## Installation
 
 ### Manual
 
-Place `BoneBot.jar` where you would like it to be installed.
+Place `BonerBot.jar` where you would like it to be installed.
 
 ### Systemd
 
-1. Place `BoneBot.jar` where you would like it to be installed.
-2. Create the following `bonebot.service` file in `/etc/systemd/system/`, making sure to change the `WorkingDirectory`
+1. Place `BonerBot.jar` where you would like it to be installed.
+2. Create the following `Bonerbot.service` file in `/etc/systemd/system/`, making sure to change the `WorkingDirectory`
    and `ExecStart`, as well as the `User`:
 
 ```ini
 [Unit]
-Description=Service to start BoneBot
+Description=Service to start BonerBot
 After=network-online.target
 
 [Service]
-WorkingDirectory=/path/to/BoneBot-folder
-ExecStart=/usr/bin/java -jar /path/to/BoneBot.jar
+WorkingDirectory=/path/to/BonerBot-folder
+ExecStart=/usr/bin/java -jar /path/to/BonerBot.jar
 User=set_user_here
 Restart=always
 
@@ -146,14 +146,14 @@ RUN apt install default-jre-headless wget locales -y
 
 WORKDIR /app
 
-RUN wget https://github.com/jeremynoesen/BoneBot/releases/download/1.7.2/BoneBot.jar
+RUN wget https://github.com/jeremynoesen/BonerBot/releases/download/1.7.2/BonerBot.jar
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-ENTRYPOINT ["java", "-jar", "BoneBot.jar"]
+ENTRYPOINT ["java", "-jar", "BonerBot.jar"]
 ```
 
 2. Create the following `docker-compose.yml` wherever you would like, making sure to change the `context` to the path of
@@ -162,8 +162,8 @@ ENTRYPOINT ["java", "-jar", "BoneBot.jar"]
 ```yaml
 version: '3'
 services:
-  bonebot:
-    container_name: bonebot
+  Bonerbot:
+    container_name: Bonerbot
     build:
       context: /path/to/dir/containing/Dockerfile/
     restart: unless-stopped
@@ -201,11 +201,11 @@ start.
 
 ### Manual
 
-Run `cd /path/to/BoneBot-folder && java -jar BoneBot.jar` to start the bot.
+Run `cd /path/to/BonerBot-folder && java -jar BonerBot.jar` to start the bot.
 
 ### Systemd
 
-Run `sudo systemctl enable bonebot && sudo systemctl start bonebot` to start the service and allow it to start on boot.
+Run `sudo systemctl enable Bonerbot && sudo systemctl start Bonerbot` to start the service and allow it to start on boot.
 
 ### Docker
 
@@ -290,7 +290,7 @@ placeholders will also be specified per module.
 - Case is ignored in the trigger.
 - The trigger can include Regex. Case is not ignored if you use Regex.
 - Trigger can use all placeholders except for `$REPLY$`.
-- For the emote, you can put either a unicode emoji, `U+1F980`, or a raw discord emote, `:bonebot:819645061200347177`.
+- For the emote, you can put either a unicode emoji, `U+1F980`, or a raw discord emote, `:Bonerbot:819645061200347177`.
 - To set a delay between when the message is sent and when the bot reacts, set `reactor-delay` in the main configuration
   to any whole number in milliseconds.
 - To set a cool down for the reactor, set `reactor-cooldown` in the main configuration to any whole number in seconds.
@@ -357,9 +357,9 @@ placeholders will also be specified per module.
 
 - You can change the colors of embeds for the meme generator and help message by setting `embed-color` in the main
   configuration to a hex code.
-- You can allow BoneBot to listen to input from other bots by setting `listen-to-bots` to `true`. It defaults
+- You can allow BonerBot to listen to input from other bots by setting `listen-to-bots` to `true`. It defaults
   to `false`.
-- BoneBot spawns new threads to process every message, edit, and member join. To limit the maximum number of worker
+- BonerBot spawns new threads to process every message, edit, and member join. To limit the maximum number of worker
   threads at a time, set `max-threads` to any integer. 0 or lower removes the limit.
 - You can make other files and directories in the bot folder as needed for your own organization of files the bot may
   use, but not for the files the bot requires.
@@ -433,7 +433,7 @@ command-cooldown: Commands can be used again in **$TIME$** seconds.
 
 ## Demonstration
 
-Below are a few images showing what BoneBot can do. Simple actions, such as reactions, text responses, and status
+Below are a few images showing what BonerBot can do. Simple actions, such as reactions, text responses, and status
 messages, are not shown due to those being basic Discord functions.
 
 ### Meme Generator
