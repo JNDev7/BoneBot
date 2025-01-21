@@ -1,4 +1,4 @@
-package xyz.jeremynoesen.bonebot
+package xyz.jeremynoesen.bonerbot
 
 import net.dv8tion.jda.api.entities.Message
 import java.io.File
@@ -205,9 +205,9 @@ object Messages {
                     .replace("\$AUTHORMENTION\$", cause.member!!.asMention)
                     .replace("\$AUTHORDISPLAYNAME\$", cause.member!!.effectiveName)
                     .replace("\$AUTHORUSERNAME\$", cause.author.name)
-                    .replace("\$BOTMENTION\$", cause.guild.getMember(BoneBot.JDA!!.selfUser)!!.asMention)
-                    .replace("\$BOTDISPLAYNAME\$", cause.guild.getMember(BoneBot.JDA!!.selfUser)!!.effectiveName)
-                    .replace("\$BOTUSERNAME\$", BoneBot.JDA!!.selfUser.name)
+                    .replace("\$BOTMENTION\$", cause.guild.getMember(BonerBot.JDA!!.selfUser)!!.asMention)
+                    .replace("\$BOTDISPLAYNAME\$", cause.guild.getMember(BonerBot.JDA!!.selfUser)!!.effectiveName)
+                    .replace("\$BOTUSERNAME\$", BonerBot.JDA!!.selfUser.name)
                     .replace("\$CHANNELMENTION\$", cause.channel.asMention)
                     .replace("\$CHANNELNAME\$", cause.channel.name)
                     .replace("\\n", "\n")
@@ -223,9 +223,9 @@ object Messages {
             toSend = toSend.replace("\$AUTHORMENTION\$", cause.member!!.asMention)
                     .replace("\$AUTHORDISPLAYNAME\$", cause.member!!.effectiveName)
                     .replace("\$AUTHORUSERNAME\$", cause.author.name)
-                    .replace("\$BOTMENTION\$", cause.guild.getMember(BoneBot.JDA!!.selfUser)!!.asMention)
-                    .replace("\$BOTDISPLAYNAME\$", cause.guild.getMember(BoneBot.JDA!!.selfUser)!!.effectiveName)
-                    .replace("\$BOTUSERNAME\$", BoneBot.JDA!!.selfUser.name)
+                    .replace("\$BOTMENTION\$", cause.guild.getMember(BonerBot.JDA!!.selfUser)!!.asMention)
+                    .replace("\$BOTDISPLAYNAME\$", cause.guild.getMember(BonerBot.JDA!!.selfUser)!!.effectiveName)
+                    .replace("\$BOTUSERNAME\$", BonerBot.JDA!!.selfUser.name)
                     .replace("\$CHANNELMENTION\$", cause.channel.asMention)
                     .replace("\$CHANNELNAME\$", cause.channel.name)
                     .replace("\\n", "\n")
